@@ -1,3 +1,19 @@
+// const express=require('express')
+
+// const app = express();
+
+// app.get("/",(req,res)=>{
+//     res.setEncoding("hello world")
+
+// })
+
+// app.get("/about", (req,res)=>{
+//     res.setEncoding("about page")
+
+// })
+
+// app.listen(3000)
+
 
 const express = require('express');
 
