@@ -11,10 +11,14 @@ app.get('/', (req,res)=>{
 
 app.post('/notes', (req,res)=>{
     // console.log(req.body)
+    notes.push(req.body)
 
-    res.json({
-        message: "Note received successfully",
-        data: req.body
+    // res.json({
+    //     message: "Note received successfully",
+    //     data: req.body
+    // })
+    res.status(201).json({
+        message: "note created successfully"
     })
 })
 
