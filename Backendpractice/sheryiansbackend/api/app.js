@@ -22,6 +22,12 @@ app.post('/notes', (req,res)=>{
     })
 })
 
+app.get('/notes', (req,res)=>{
+    res.status(200).json({
+        notes:notes
+    })
+})
+
 
 // app.listen(3000)
 module.exports=app
