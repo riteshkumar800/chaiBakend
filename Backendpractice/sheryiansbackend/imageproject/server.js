@@ -1,5 +1,7 @@
 const app = require("./src/app")
 
+// app=express()
+
 const connectDB = require("./src/db/db")
 
 connectDB();
