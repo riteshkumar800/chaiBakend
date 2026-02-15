@@ -17,4 +17,5 @@ console.log(buffer);
     return result;
 }
 
+//  module.exports=uploadFile;
  module.exports=uploadFile;
