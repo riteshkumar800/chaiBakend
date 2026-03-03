@@ -7,13 +7,20 @@ const CreatePost = () => {
 
     const navigate=useNavigate()
 
+    const handlesubmit=async(e)=>{
+        e.preventDefault()
+        
+
+
+    }
+
 
   return (
     <section className='create-post-section'>
         <h1>Create post</h1>
 
 
-         <form >
+         <form onSubmit={handlesubmit}>
             <input type="file" name='image' accept='image/*' />
             <input type="text" name='caption' required />
             <button type='submit'>Submit</button>
