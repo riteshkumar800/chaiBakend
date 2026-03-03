@@ -1,6 +1,13 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const CreatePost = () => {
+
+   
+
+    const navigate=useNavigate()
+
+
   return (
     <section className='create-post-section'>
         <h1>Create post</h1>
@@ -10,7 +17,7 @@ const CreatePost = () => {
             <input type="file" name='image' accept='image/*' />
             <input type="text" name='caption' required />
             <button type='submit'>Submit</button>
-            
+
          </form>
     </section>
   )
