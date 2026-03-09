@@ -6,18 +6,20 @@ async function registerUser(req,res){
 
 
 
-    const isUserAlreadyExists=await userModel.findOne({
-        $or:[
-            {username},
-            {email}
-        ]
+    const user=userModel.create({
+        username, email, password
+    })
+
+    const token= jwt.sign({
+        id:user._id
+    }, process.env.JWT_SECRET)
+
+    res.status(201).json({
+        message:"user registered successfully",
+        user,
+        token
     })
     
-    if(isUserAlreadyExists){
-        return res.status(409).json({message:"user already exists"})
-    }
-
-    const hash = await bcrypt.hash(password, 10)
 
 
 
